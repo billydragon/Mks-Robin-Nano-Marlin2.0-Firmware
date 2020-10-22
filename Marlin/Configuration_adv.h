@@ -1655,11 +1655,13 @@
  * probe points will follow. This prevents any change from causing
  * the probe to be unable to reach any points.
  */
+
 #if PROBE_SELECTED && !IS_KINEMATIC
   #define PROBING_MARGIN_LEFT PROBING_MARGIN +25
   #define PROBING_MARGIN_RIGHT 0
   #define PROBING_MARGIN_FRONT PROBING_MARGIN + 5
   #define PROBING_MARGIN_BACK PROBING_MARGIN
+#endif
 
 #if EITHER(MESH_BED_LEVELING, AUTO_BED_LEVELING_UBL)
   // Override the mesh area if the automatic (max) area is too large
@@ -3526,7 +3528,7 @@
 //
 // M100 Free Memory Watcher to debug memory usage
 //
-#define M100_FREE_MEMORY_WATCHER
+//#define M100_FREE_MEMORY_WATCHER
 
 //
 // M43 - display pin status, toggle pins, watch pins, watch endstops & toggle LED, test servo probe
