@@ -508,7 +508,6 @@
 #define DEFAULT_Ki 0.72
 #define DEFAULT_Kd 60.54
 
-
 #endif // PIDTEMP
 
 //===========================================================================
@@ -1000,7 +999,7 @@
  *     |    [-]    |
  *     O-- FRONT --+
  */
-#define NOZZLE_TO_PROBE_OFFSET { -27, -3, -2.15 }
+#define NOZZLE_TO_PROBE_OFFSET { -27, -3, -2.25 }
 
 // Most probes should stay away from the edges of the bed, but
 // with NOZZLE_AS_PROBE this can be negative for a wider probing area.
@@ -2416,4 +2415,4 @@
 //#define DEACTIVATE_SERVOS_AFTER_MOVE
 
 // Allow servo angle to be edited and saved to EEPROM
-#define EDITABLE_SERVO_ANGLES
+//#define EDITABLE_SERVO_ANGLES
