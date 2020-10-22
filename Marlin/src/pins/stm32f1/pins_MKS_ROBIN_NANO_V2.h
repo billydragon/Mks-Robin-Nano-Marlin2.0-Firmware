@@ -178,10 +178,11 @@
 // Heaters / Fans
 //
 #define HEATER_0_PIN                        PC3   // HEATER1
-#define HEATER_1_PIN                        PB0   // HEATER2
+//#define HEATER_1_PIN                        PB0   // HEATER2
 #define HEATER_BED_PIN                      PA0   // HOT BED
 
 #define FAN_PIN                             PB1   // FAN
+#define FAN1_PIN                            PB0   // FAN
 
 //
 // Thermocouples
@@ -193,7 +194,8 @@
 // Misc. Functions
 //
 #if HAS_TFT_LVGL_UI
-  //#define MKSPWC
+#define PS_ON_PIN                           PB2   // PW_OFF  
+  #define MKSPWC
   #ifdef MKSPWC
     #define SUICIDE_PIN                       PB2   // Enable MKSPWC SUICIDE PIN
     #define SUICIDE_PIN_INVERTING             false // Enable MKSPWC PIN STATE
@@ -214,10 +216,13 @@
     #define MKS_TEST_PS_ON_PIN                PB2   // PW_OFF
   #endif
 #else
-  //#define POWER_LOSS_PIN                      PA2   // PW_DET
-  //#define PS_ON_PIN                           PB2   // PW_OFF
+  #define POWER_LOSS_PIN                      PA2   // PW_DET
+  #define PS_ON_PIN                           PB2   // PW_OFF
+  #define KILL_PIN 			                  PA2   // PW_DET
+  #define KILL_PIN_INVERTING 		 		  false  // 
+  #define KILL_PIN_STATE                      true 
   #define FIL_RUNOUT_PIN                      PA4
-  #define FIL_RUNOUT2_PIN                     PE6
+  //#define FIL_RUNOUT2_PIN                     PE6
 #endif
 
 #define SERVO0_PIN                          PA8   // Enable BLTOUCH
